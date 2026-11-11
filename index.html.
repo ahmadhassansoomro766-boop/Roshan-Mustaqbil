@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>روشن مستقبل — تعلیمی پلیٹ فارم</title>
+<style>
+:root{--navy:#17324d;--blue:#2367a5;--teal:#159b91;--gold:#f2b84b;--bg:#f4f7fb;--ink:#203247;--muted:#64748b;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+header{background:linear-gradient(120deg,#17324d,#2367a5);color:white;padding:22px max(5%,calc((100% - 1100px)/2))}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-size:25px;font-weight:800}.brand span{color:#ffd27a}
+nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
+.hero{max-width:1100px;margin:26px auto 0;padding:25px 5% 55px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
+.hero h1{font-size:clamp(28px,4vw,43px);line-height:1.35;margin:0 0 12px}.hero p{color:#e4eef8;margin:0 0 20px}
+.hero-card{background:#ffffff18;border:1px solid #ffffff40;border-radius:20px;padding:22px}
+.btn{border:0;border-radius:10px;padding:11px 18px;background:var(--gold);color:#26384a;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.secondary{background:white;color:var(--blue);margin-right:8px}
+main{max-width:1100px;margin:26px auto;padding:0 5% 50px}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h2{color:var(--navy);margin:0 0 14px;font-size:23px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0 22px}
+input,select{border:1px solid #d7e0ea;background:white;border-radius:10px;padding:11px 13px;font:inherit;min-width:180px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{background:white;border:1px solid #e4eaf1;border-radius:16px;padding:17px;box-shadow:0 5px 18px #19324b0a}
+.card h3{margin:7px 0;color:var(--navy);font-size:18px}
+.tag{display:inline-block;border-radius:20px;padding:3px 10px;font-size:12px;background:#e8f5f3;color:#087c73}
+.tag.paid{background:#fff2d8;color:#956000}
+.card p{color:var(--muted);font-size:14px;margin:5px 0 12px}
+.card button{background:var(--blue);color:white;border:0;border-radius:9px;padding:9px 13px;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}
+.stat{background:white;border-radius:14px;padding:14px;text-align:center}.stat strong{display:block;color:var(--blue);font-size:23px}
+.notice{background:#fff8e8;border-right:4px solid var(--gold);padding:13px 16px;border-radius:10px;color:#654b17;margin:22px 0;font-size:14px}
+footer{text-align:center;background:#17324d;color:#dbe7f2;padding:22px;font-size:13px}
+.modal{display:none;position:fixed;inset:0;background:#10243bcc;align-items:center;justify-content:center;padding:18px}
+.modal.show{display:flex}.modalbox{background:white;border-radius:18px;padding:22px;max-width:480px;width:100%}.close{float:left;border:0;background:#edf2f7;border-radius:8px;padding:5px 10px;cursor:pointer}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero{padding-bottom:30px}nav a{margin:0 4px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+ <div class="brand">روشن <span>مستقبل</span></div>
+ <div><a href="#courses">کورسز</a><a href="#classes">جماعتیں</a><a href="#about">ہمارے بارے میں</a></div>
+</nav>
+<section class="hero">
+ <div>
+  <h1>علم حاصل کریں، اپنا مستقبل روشن بنائیں</h1>
+  <p>پاکستانی نصاب کے مطابق اسباق، آسان وضاحتیں، مشقیں اور دلچسپ اضافی معلومات — سب ایک جگہ۔</p>
+  <a class="btn" href="#courses">اسباق دیکھیں</a>
+  <a class="btn secondary" href="#classes">جماعت منتخب کریں</a>
+ </div>
+ <div class="hero-card">
+  <h2 style="color:white">آپ کا تعلیمی سفر یہاں سے شروع ہوتا ہے</h2>
+  <p>مفت اسباق سے آغاز کریں اور اپنی رفتار سے سیکھیں۔</p>
+  <div style="font-size:42px">📚 🎓 ✨</div>
+ </div>
+</section>
+</header>
+<main>
+<section class="stats">
+ <div class="stat"><strong>1–12</strong>جماعتیں</div>
+ <div class="stat"><strong>اردو</strong>آسان زبان</div>
+ <div class="stat"><strong>مفت + پریمیم</strong>سیکھنے کے مواقع</div>
+</section>
+<section id="classes">
+ <div class="section-head"><h2>اپنی جماعت منتخب کریں</h2></div>
+ <div class="controls">
+  <select id="grade"><option value="all">تمام جماعتیں</option><option>جماعت 1</option><option>جماعت 2</option><option>جماعت 3</option><option>جماعت 4</option><option>جماعت 5</option><option>جماعت 6</option><option>جماعت 7</option><option>جماعت 8</option><option>جماعت 9</option><option>جماعت 10</option><option>جماعت 11</option><option>جماعت 12</option></select>
+  <input id="search" placeholder="سبق یا مضمون تلاش کریں">
+ </div>
+</section>
+<section id="courses">
+ <div class="section-head"><h2>منتخب اسباق</h2><span class="tag">نمونہ مواد</span></div>
+ <div class="grid" id="courseGrid">
+  <article class="card" data-grade="جماعت 5" data-search="ریاضی کسر جمع"><span class="tag">مفت سبق</span><h3>ریاضی: کسر کا تعارف</h3><p>کسر کیا ہے؟ روزمرہ مثالوں کے ذریعے آسان وضاحت۔</p><button onclick="openLesson('ریاضی: کسر کا تعارف','کسر کسی مکمل چیز کے برابر حصوں میں سے ایک یا زیادہ حصوں کو ظاہر کرتی ہے۔ مثال: آدھا سیب یعنی 1/2۔')">سبق پڑھیں</button></article>
+  <article class="card" data-grade="جماعت 6" data-search="سائنس پودے خوراک"><span class="tag">مفت سبق</span><h3>سائنس: پودے اپنی خوراک کیسے بناتے ہیں؟</h3><p>ضیائی تالیف کا بنیادی تعارف اور دلچسپ معلومات۔</p><button onclick="openLesson('سائنس: پودے اپنی خوراک کیسے بناتے ہیں؟','پودے سورج کی روشنی، پانی اور ہوا میں موجود کاربن ڈائی آکسائیڈ کی مدد سے اپنی خوراک بناتے ہیں۔ اس عمل کو ضیائی تالیف کہتے ہیں۔')">سبق پڑھیں</button></article>
+  <article class="card" data-grade="جماعت 8" data-search="اردو قواعد اسم"><span class="tag paid">پریمیم نمونہ</span><h3>اردو: اسم کی اقسام</h3><p>مثالوں اور مشقوں کے ساتھ قواعد کا سبق۔</p><button onclick="openLesson('اردو: اسم کی اقسام','یہ پریمیم کورس کا نمائشی صفحہ ہے۔ اصل ادائیگی کا نظام ابھی شامل نہیں کیا گیا۔')">تفصیل دیکھیں</button></article>
+  <article class="card" data-grade="جماعت 9" data-search="انگلش گرامر زمانہ"><span class="tag">مفت سبق</span><h3>انگلش: زمانوں کا تعارف</h3><p>حال، ماضی اور مستقبل کے زمانوں کی بنیادی پہچان۔</p><button onclick="openLesson('انگلش: زمانوں کا تعارف','زمانہ فعل کے وقت کو ظاہر کرتا ہے۔ بنیادی طور پر حال، ماضی اور مستقبل کے زمانے ہوتے ہیں۔')">سبق پڑھیں</button></article>
+  <article class="card" data-grade="جماعت 4" data-search="اضافی معلومات خلا نظام شمسی"><span class="tag">مفت سبق</span><h3>اضافی معلومات: نظامِ شمسی</h3><p>سورج اور اس کے گرد گردش کرنے والے سیاروں کا تعارف۔</p><button onclick="openLesson('نظامِ شمسی','نظامِ شمسی میں سورج، آٹھ سیارے اور دیگر اجرام شامل ہیں۔ زمین بھی ایک سیارہ ہے۔')">سبق پڑھیں</button></article>
+  <article class="card" data-grade="جماعت 10" data-search="ریاضی الجبرا مساوات"><span class="tag paid">پریمیم نمونہ</span><h3>ریاضی: الجبرا کی مشق</h3><p>مرحلہ وار سوالات اور حل شدہ مثالیں۔</p><button onclick="openLesson('ریاضی: الجبرا کی مشق','یہ پریمیم کورس کا نمائشی صفحہ ہے۔ اصل ادائیگی کا نظام ابھی شامل نہیں کیا گیا۔')">تفصیل دیکھیں</button></article>
+ </div>
+ <p id="empty" style="display:none;color:#64748b">اس تلاش کے مطابق کوئی سبق نہیں ملا۔</p>
+</section>
+<section id="about" style="margin-top:30px">
+ <h2>روشن مستقبل کے بارے میں</h2>
+ <div class="card"><p>روشن مستقبل ایک تعلیمی پلیٹ فارم کا ابتدائی نمونہ ہے۔ یہاں پاکستانی نصاب کے مطابق مواد اور اضافی معلومات فراہم کرنے کا منصوبہ ہے۔ مواد کو متعلقہ نصابی کتابوں اور معتبر ذرائع سے جانچ کر شامل کیا جائے گا۔</p></div>
+</section>
+<div class="notice">اہم: یہ ابتدائی نمونہ ویب سائٹ ہے۔ صارف اکاؤنٹس، اصل کورس ڈیٹا بیس، محفوظ ادائیگیاں، سرٹیفکیٹس اور ایڈمن پینل ابھی فعال نہیں ہیں۔ طلبہ کے لیے مواد شائع کرنے سے پہلے نصابی درستگی اور حقوقِ اشاعت کی جانچ ضروری ہے۔</div>
+</main>
+<footer>© روشن مستقبل — علم سب کے لیے</footer>
+<div class="modal" id="modal" onclick="if(event.target===this)closeLesson()"><div class="modalbox"><button class="close" onclick="closeLesson()">بند کریں</button><h2 id="lessonTitle"></h2><p id="lessonBody"></p></div></div>
+<script>
+const search=document.getElementById('search'),grade=document.getElementById('grade');
+function filterCourses(){let q=search.value.trim().toLowerCase(),g=grade.value,shown=0;document.querySelectorAll('#courseGrid .card').forEach(c=>{let ok=(g==='all'||c.dataset.grade===g)&&(!q||(c.dataset.search+' '+c.innerText).toLowerCase().includes(q));c.style.display=ok?'block':'none';if(ok)shown++});document.getElementById('empty').style.display=shown?'none':'block'}
+search.addEventListener('input',filterCourses);grade.addEventListener('change',filterCourses);
+function openLesson(t,b){document.getElementById('lessonTitle').textContent=t;document.getElementById('lessonBody').textContent=b;document.getElementById('modal').classList.add('show')}
+function closeLesson(){document.getElementById('modal').classList.remove('show')}
+</script>
+</body>
+</html>
